@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Redirecting...</title>
+		<script>
+			function openLinks() {
+				// Define the list of URLs
+				const urls = [
+					'https://bcourses.berkeley.edu/courses/1538898/assignments',
+					'https://bcourses.berkeley.edu/courses/1536654',
+					'https://www.gradescope.com/courses/843175',
+					'https://www.gradescope.com/courses/823368',
+				];
+
+				// Open each URL in a new tab
+				urls.forEach((url) => {
+					window.open(url, '_blank');
+				});
+
+				// Close the current tab after a delay
+				setTimeout(() => {
+					window.close();
+				}, 1000); // Adjust the delay if necessary
+			}
+		</script>
+	</head>
+	<body onload="openLinks()">
+		<p>Redirecting...</p>
+	</body>
+</html>
