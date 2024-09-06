@@ -14,15 +14,13 @@
 					'https://www.gradescope.com/courses/823368',
 				];
 
-				// Open each URL in a new tab
-				urls.forEach((url) => {
-					window.open(url, '_blank');
-				});
+				// Open the first URL in the current tab
+				window.location.href = urls[0];
 
-				// Close the current tab after a delay
-				setTimeout(() => {
-					window.close();
-				}, 0); // Adjust the delay if necessary
+				// Open the remaining URLs in new tabs
+				for (let i = 1; i < urls.length; i++) {
+					window.open(urls[i], '_blank');
+				}
 			}
 		</script>
 	</head>
